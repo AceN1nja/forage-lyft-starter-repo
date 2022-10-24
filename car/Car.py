@@ -1,13 +1,10 @@
 class Car:
-    def __init__(self):
-        self.battery = None
-        self.engine = None
+    def __init__(self, engine, battery):
+        self.battery = battery
+        self.engine = engine
 
     def needs_service(self):
-        if self.battery.needs_service() or self.engine.needs_service():
-            return True
-        else:
-            return False
+        return self.battery.needs_service() or self.engine.needs_service()
 
     def change_battery(self, battery):
         self.battery = battery

@@ -1,12 +1,11 @@
-from abc import ABC
-from engine import Engine
+from engine.Engine import Engine
 
 
-class Sternman(Engine, ABC):
+class Sternman(Engine):
     def __init__(self, warning_light_is_on):
         self.warning_light_is_on = warning_light_is_on
 
-    def engine_should_be_serviced(self):
+    def needs_service(self):
         if self.warning_light_is_on:
             return True
         else:
