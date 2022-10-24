@@ -8,4 +8,4 @@ class Spindler(Battery):
         self.last_service_date = last_service_date
 
     def needs_service(self, current_date=datetime.today()):
-        return current_date.year - self.last_service_date.year > 2
+        return current_date.year - self.last_service_date.year > 3
